@@ -1,0 +1,19 @@
+{
+  "name": "threejs-case",
+  "version": "1.0.0",
+  "description": "threejs case",
+  "main": "three.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@eastdesire/jscolor": "^2.4.7",
+    "axios": "^0.26.0",
+    "dom-to-image": "^2.6.0",
+    "dotenv": "^16.0.0",
+    "requirejs": "^2.3.6",
+    "three": "^0.138.3"
+  }
+}

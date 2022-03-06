@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>My Second Three.js App</title>
+        <style>
+            body {
+                margin: 0;
+                background-color: #999;
+            }
+            canvas {
+                width: 100%;
+                height: 100%;
+            }
+            .image-file {
+                content: "Select some files";
+                background: #fff;
+                border: 1px solid #999;
+                border-radius: 3px;
+                padding: 5px 8px;
+                outline: none;
+                white-space: nowrap;
+                -webkit-user-select: none;
+                cursor: pointer;
+                text-shadow: 1px 1px #fff;
+                font-weight: 700;
+                font-size: 10pt;
+            }
+            .input-container {
+                display: flex;
+                justify-content: center;
+            }
+            .logo {
+                display: flex;
+                width: 150px;
+                height: 150px;
+                margin-left: 10%;
+            }
+            .logo-container {
+                display: flex;
+                margin-bottom: 20px;
+            }
+        </style>
+
+          <script type="importmap">
+            {
+                "imports": {
+                    "three": "./node_modules/three/build/three.module.js",
+                    "stl-loader": "./node_modules/three/examples/jsm/loaders/STLLoader.js",
+                    "gui": "./node_modules/three/examples/jsm/libs/lil-gui.module.min.js",
+                    "orbit-controls": "./node_modules/three/examples/jsm/controls/OrbitControls.js"
+                }
+            }
+        </script>
+        <script type="module" src="./threeJS-case.js"></script>
+        <script src="./node_modules/dom-to-image/src/dom-to-image.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+    </head>
+    <body>
+        <div id="container">
+            <div class="input-container">Pick Color: <input id="color-picker" type="color" value="#3399FF80"><input id="image-file" class="image-file" type="file"><button id="submit-button" type="button" class="btn">Upload File</button><button id="logo-button" type="button" class="btn">Upload Logo</button></input><button id="screenshot">Take Screenshot</button></div>
+            <div class="logo-container"><img id="logo" class="logo" src="./uploads/logo-placeholder.png" /></div>
+        </div>
+    </body>
+</html>
